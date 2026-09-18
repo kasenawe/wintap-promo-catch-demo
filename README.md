@@ -1,10 +1,10 @@
 # Promo Catch
 
-Demo web confidencial de **WINTAP Promo Catch**. Reproduce el archivo `.riv` aprobado mediante el runtime oficial de Rive. No es un producto en producción ni una implementación contratada.
+Demo web de un concepto técnico independiente de **Promo Catch**, preparado como propuesta para WINTAP. Reproduce el archivo `.riv` aprobado mediante el runtime oficial de Rive. No es un producto en producción ni una implementación contratada.
 
-## Carácter confidencial
+## Alcance de la demo
 
-Esta preview es técnica y confidencial. El proyecto está preparado para permanecer fuera de buscadores (`noindex`), pero **eso no sustituye un control de acceso**. El acceso se configurará después con Vercel Authentication y un Shareable Link revocable.
+Esta preview es técnica y no oficial. El proyecto está preparado para permanecer fuera de buscadores (`noindex`), aunque la URL desplegada puede ser visitada por cualquiera que la conozca.
 
 ## Stack
 
@@ -109,7 +109,7 @@ El reinicio (`Reiniciar demo`) remonta el componente con una `key` de React para
 - Sin sitemap
 - Sin datos personales ni secretos en el repositorio
 
-**Limitación:** `noindex` evita indexación, no es un control de acceso.
+**Limitación:** `noindex` evita la indexación en buscadores, pero no controla el acceso. Cualquiera que conozca la URL pública podrá visitar la demo.
 
 ## Preparación para Vercel
 
@@ -118,8 +118,8 @@ El proyecto es un sitio Vite estático. En Vercel:
 1. Framework Preset: Vite
 2. Build Command: `npm run build`
 3. Output Directory: `dist`
-4. No publicar hasta tener autorización
-5. Después del primer preview: activar Vercel Authentication y crear un Shareable Link revocable
+4. Publicar como deployment público no indexado
+5. Verificar después del deploy los metadatos y el encabezado `X-Robots-Tag`
 
 ## Procedimiento recomendado de QA
 

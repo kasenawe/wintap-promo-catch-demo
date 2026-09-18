@@ -11,7 +11,7 @@ export default function App() {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
-        <p className={styles.kicker}>Confidential technical preview</p>
+        <p className={styles.kicker}>Independent technical concept</p>
         <h1 className={styles.title}>Promo Catch</h1>
         <p className={styles.subtitle}>Interactive retail engagement concept</p>
       </header>
