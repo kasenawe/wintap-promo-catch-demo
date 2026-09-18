@@ -36,6 +36,8 @@ export function PromoCatchExperience() {
             artboard: PROMO_ARTBOARD,
             stateMachine: PROMO_STATE_MACHINE,
             autoplay: true,
+            // CatchButton writes to ViewModel1.claimPromo inside the .riv.
+            // Data Binding must exist for that relative listener action to work.
             autoBind: true,
             shouldDisableRiveListeners: false,
             layout: new Layout({
@@ -76,6 +78,8 @@ export function PromoCatchExperience() {
     const viewModelInstance = rive.viewModelInstance
     const properties = viewModelInstance?.properties ?? []
 
+    // Reading the trigger properties verifies the binding; it does not fire
+    // them. The real interaction remains entirely inside Rive.
     const bindReport = {
       hasViewModelInstance: viewModelInstance != null,
       viewModelName: viewModelInstance?.viewModelName ?? null,

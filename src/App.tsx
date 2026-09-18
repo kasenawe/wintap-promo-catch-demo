@@ -18,6 +18,8 @@ export default function App() {
 
       <main className={styles.main}>
         {support.supported ? (
+          // Changing this key remounts both the error boundary and Rive tree,
+          // restoring a clean state without reloading the whole page.
           <ExperienceErrorBoundary key={session}>
             <PromoCatchExperience />
           </ExperienceErrorBoundary>

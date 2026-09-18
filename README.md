@@ -80,6 +80,10 @@ public/robots.txt                            bloqueo de rastreo
 vercel.json                                  encabezado X-Robots-Tag
 ```
 
+Para estudiar la arquitectura, el flujo React–Rive, Data Binding, responsive,
+privacidad, pruebas y despliegue, consulta
+[`docs/TECHNICAL_OVERVIEW.md`](docs/TECHNICAL_OVERVIEW.md).
+
 ## Integración de Rive
 
 La experiencia carga el `.riv` como asset local, no como recreación HTML/CSS.

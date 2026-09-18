@@ -26,6 +26,8 @@ export function useContainedSize(
 
       const availableRatio = availWidth / availHeight
 
+      // Fit the largest rectangle with the artboard ratio inside the stage.
+      // One dimension fills the available space; the other is derived.
       if (availableRatio > ratio) {
         const height = availHeight
         setSize({ width: height * ratio, height })
