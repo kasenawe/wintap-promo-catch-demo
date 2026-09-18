@@ -1,9 +1,9 @@
 :root {
-  --bg: #0b0d12;
-  --bg-elevated: #12151c;
-  --text: #e8eaef;
-  --text-muted: #a7adb8;
-  --focus: #8ec8ff;
+  --bg: #000;
+  --bg-elevated: #0e0e0e;
+  --text: #fff;
+  --text-muted: #9a9a9a;
+  --focus: #bfff00;
   --chrome: 8.25rem;
   color-scheme: dark;
   font-family:
@@ -39,9 +39,7 @@ html {
 body {
   margin: 0;
   overflow-x: hidden;
-  background:
-    radial-gradient(1200px 700px at 50% -10%, #182033 0%, transparent 58%),
-    var(--bg);
+  background: var(--bg);
   color: var(--text);
 }
 

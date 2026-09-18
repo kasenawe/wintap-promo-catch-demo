@@ -72,8 +72,9 @@ npm run test:e2e
 ## Estructura relevante
 
 ```text
-wintap_promo_catch_—_technical_concept.riv   archivo original, no modificar
-src/assets/wintap-promo-catch.riv            copia de build, hash idéntico
+rive/promo-catch/scene.rml                   fuente editable de la escena Rive
+rive/promo-catch/Montserrat.ttf              fuente open source embebida
+src/assets/wintap-promo-catch.riv            build generado para el runtime
 src/components/PromoCatchExperience.tsx      runtime oficial de Rive
 src/App.tsx                                  presentación y reinicio
 public/robots.txt                            bloqueo de rastreo
@@ -97,9 +98,15 @@ La experiencia carga el `.riv` como asset local, no como recreación HTML/CSS.
 - Listeners nativos de Rive habilitados
 - El clic real ocurre dentro del canvas
 
-`claimPromo` y `expirePromo` son triggers de `ViewModel1`, no inputs tradicionales de la State Machine. Por eso `stateMachineInputs("PromoMachine")` devuelve `[]` y eso no es un error. El Listener `Click` de `CatchButton` ejecuta `set ./ claimPromo`. La integración debe usar `autoBind: true` para enlazar la instancia del View Model. Sin `autoBind`, el runtime carga y reproduce la State Machine, pero la acción del listener no tiene una instancia enlazada.
+`PromoViewModel` expone `started`, `claimed`, `expired` y `ctaLabel`. Los
+listeners de Rive escriben `started` al tocar la W y `claimed` al tocar el CTA.
+React observa esas propiedades, inicia los 30 segundos después de la revelación
+y actualiza `ctaLabel`; cuando llega a cero escribe `expired`. La representación,
+los hit targets y las transiciones visuales siguen dentro del `.riv`.
 
-No se llama a esos triggers desde JavaScript. El archivo `.riv` no se modifica.
+La integración necesita `autoBind: true` para enlazar la instancia del View
+Model. La fuente RML se conserva en el repositorio y el `.riv` se vuelve a
+generar con la CLI oficial de Rive.
 
 La API actual del paquete usa `stateMachine` (singular). `stateMachines` sigue funcionando, pero está deprecado y genera un warning del runtime.
 
@@ -132,9 +139,9 @@ El proyecto es un sitio Vite estático. En Vercel:
 3. `npm run typecheck`
 4. `npm run build`
 5. `npm run preview`
-6. Caso A: carga inicial, halo y countdown
-7. Caso B: un clic en el botón real del canvas antes de 15 s
-8. Caso C: esperar 15 s sin interactuar
+6. Caso A: tocar la W y observar la revelación de 2,5 s + 200 ms de negro
+7. Caso B: atrapar desde el botón real del canvas antes de 30 s
+8. Caso C: esperar 30 s sin interactuar
 9. Caso D: `Reiniciar demo` después de éxito y después de vencimiento
 10. Caso E: 390×844, 360×800, 412×915, 768×1024 y 1440×900
 
@@ -145,10 +152,10 @@ El proyecto es un sitio Vite estático. En Vercel:
 Validaciones confirmadas:
 
 1. Carga de `PromoScreen` y `PromoMachine`.
-2. Data Binding de `ViewModel1` sin warnings.
-3. Clic real antes de 15 segundos.
-4. Emisión de `ButtonPress` y `PromoClaimed`.
-5. Estado visual final `¡PROMO ATRAPADA!`.
+2. Data Binding de `PromoViewModel` sin warnings.
+3. Activación real desde la W dentro del canvas.
+4. Revelación de 2,5 s, corte negro de 200 ms y countdown de 30 s.
+5. Estado visual final `PROMO ATRAPADA`.
 6. Segundo clic bloqueado.
 7. Vencimiento sin interacción.
 8. Reinicio limpio.

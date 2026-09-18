@@ -106,8 +106,8 @@ test.describe('Promo Catch responsive', () => {
   }
 })
 
-test.describe('Promo Catch interaction attempt', () => {
-  test('canvas remains hittable at relative coordinates', async ({ page }) => {
+test.describe('Promo Catch interaction', () => {
+  test('W reveal and catch targets remain hittable', async ({ page }) => {
     const errors = attachConsoleGuards(page)
     await page.setViewportSize({ width: 1440, height: 900 })
     await page.goto('/')
@@ -126,12 +126,18 @@ test.describe('Promo Catch interaction attempt', () => {
         const element = document.elementFromPoint(x, y)
         return element?.tagName ?? null
       },
-      { x: box.x + box.width * 0.5, y: box.y + box.height * 0.813 },
+      { x: box.x + box.width * 0.5, y: box.y + box.height * 0.481 },
     )
 
     expect(hit).toBe('CANVAS')
     await canvas.click({
-      position: { x: box.width * 0.5, y: box.height * 0.813 },
+      position: { x: box.width * 0.5, y: box.height * 0.481 },
+      force: true,
+    })
+
+    await page.waitForTimeout(3_000)
+    await canvas.click({
+      position: { x: box.width * 0.5, y: box.height * 0.789 },
       force: true,
     })
 

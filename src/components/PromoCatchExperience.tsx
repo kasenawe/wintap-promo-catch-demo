@@ -36,8 +36,8 @@ export function PromoCatchExperience() {
             artboard: PROMO_ARTBOARD,
             stateMachine: PROMO_STATE_MACHINE,
             autoplay: true,
-            // CatchButton writes to ViewModel1.claimPromo inside the .riv.
-            // Data Binding must exist for that relative listener action to work.
+            // The W, catch and reset listeners write to PromoViewModel inside
+            // the .riv. Data Binding must exist for those actions to work.
             autoBind: true,
             shouldDisableRiveListeners: false,
             layout: new Layout({
@@ -71,11 +71,75 @@ export function PromoCatchExperience() {
 
     rive.setupRiveListeners()
 
-    if (!import.meta.env.DEV) {
-      return
+    const viewModelInstance = rive.viewModelInstance
+    const started = viewModelInstance?.boolean('started')
+    const claimed = viewModelInstance?.boolean('claimed')
+    const expired = viewModelInstance?.boolean('expired')
+    const ctaLabel = viewModelInstance?.string('ctaLabel')
+    let revealTimer: ReturnType<typeof setTimeout> | undefined
+    let countdownTimer: ReturnType<typeof setInterval> | undefined
+
+    const stopTimers = () => {
+      if (revealTimer) {
+        clearTimeout(revealTimer)
+        revealTimer = undefined
+      }
+      if (countdownTimer) {
+        clearInterval(countdownTimer)
+        countdownTimer = undefined
+      }
     }
 
-    const viewModelInstance = rive.viewModelInstance
+    const resetCountdown = () => {
+      stopTimers()
+      if (ctaLabel) {
+        ctaLabel.value = 'ATRAPAR [30]'
+      }
+    }
+
+    const onStartedChange = () => {
+      resetCountdown()
+      if (!started?.value) {
+        return
+      }
+
+      let remaining = 30
+      revealTimer = setTimeout(() => {
+        countdownTimer = setInterval(() => {
+          remaining -= 1
+          if (ctaLabel) {
+            ctaLabel.value = `ATRAPAR [${String(remaining).padStart(2, '0')}]`
+          }
+          if (remaining <= 0) {
+            stopTimers()
+            if (expired) {
+              expired.value = true
+            }
+          }
+        }, 1_000)
+      }, 2_700)
+    }
+
+    const onTerminalStateChange = () => {
+      if (claimed?.value || expired?.value) {
+        stopTimers()
+      }
+    }
+
+    started?.on(onStartedChange)
+    claimed?.on(onTerminalStateChange)
+    expired?.on(onTerminalStateChange)
+    resetCountdown()
+
+    if (!import.meta.env.DEV) {
+      return () => {
+        stopTimers()
+        started?.off(onStartedChange)
+        claimed?.off(onTerminalStateChange)
+        expired?.off(onTerminalStateChange)
+      }
+    }
+
     const properties = viewModelInstance?.properties ?? []
 
     // Reading the trigger properties verifies the binding; it does not fire
@@ -87,8 +151,10 @@ export function PromoCatchExperience() {
         name: property.name,
         type: property.type,
       })),
-      hasClaimPromo: viewModelInstance?.trigger('claimPromo') != null,
-      hasExpirePromo: viewModelInstance?.trigger('expirePromo') != null,
+      hasStarted: started != null,
+      hasClaimed: claimed != null,
+      hasExpired: expired != null,
+      hasCtaLabel: ctaLabel != null,
     }
 
     console.info('[PromoCatch] Data Binding', bindReport)
@@ -112,6 +178,10 @@ export function PromoCatchExperience() {
     rive.on(EventType.StateChange, onStateChange)
 
     return () => {
+      stopTimers()
+      started?.off(onStartedChange)
+      claimed?.off(onTerminalStateChange)
+      expired?.off(onTerminalStateChange)
       rive.off(EventType.StateChange, onStateChange)
     }
   }, [rive])
@@ -136,7 +206,7 @@ export function PromoCatchExperience() {
           <RiveComponent
             className={styles.riveHost}
             role="img"
-            aria-label="Promo Catch. Pulsa el botón dentro de la animación para atrapar la promoción antes de que venza."
+            aria-label="Promo Catch. Toca la W, espera la revelación y atrapa la promoción antes de que termine el contador de treinta segundos."
           />
         ) : null}
         {status !== 'ready' ? (

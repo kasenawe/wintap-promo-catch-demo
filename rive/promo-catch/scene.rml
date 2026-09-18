@@ -1,0 +1,209 @@
+<Rive version="1" kind="fragment">
+  <Artboard defaultStateMachineId="0:90" viewModelId="0:100" viewModelInstanceId="0:105" styleId="0:6" width="390" height="844" name="PromoScreen" id="0:2">
+    <LayoutComponentStyle name="Artboard Style" id="0:6"/>
+    <Fill name="Background"><SolidColor colorValue="FF000000" name="Black"/></Fill>
+
+    <Text x="195" y="42" originX="0.5" sizingValue="autoWidth" name="Brand" id="0:3">
+      <TextStylePaint fontSize="17" fontAssetId="0:200" letterSpacing="3" name="Brand Style" id="0:4"><Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="White"/></Fill></TextStylePaint>
+      <TextValueRun styleId="0:4" text="WINTAP" name="Brand Run"/>
+    </Text>
+    <Shape x="42" y="78" name="Header Line" id="0:5"><Rectangle width="306" height="1" originX="0" originY="0.5" name="Line"/><Fill name="Fill"><SolidColor colorValue="FF303030" name="Gray"/></Fill></Shape>
+
+    <Node opacity="1" name="Ready" id="0:10">
+      <Text x="195" y="120" originX="0.5" sizingValue="autoWidth" name="Ready Eyebrow" id="0:11">
+        <TextStylePaint fontSize="13" fontAssetId="0:200" letterSpacing="2" name="Eyebrow" id="0:12"><Fill name="Fill"><SolidColor colorValue="FFBFFF00" name="Green"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:12" text="PROMO CATCH" name="Run"/>
+      </Text>
+      <Text x="45" y="174" width="300" height="90" sizingValue="fixed" alignValue="center" verticalAlignValue="middle" wrapValue="wrap" name="Ready Title" id="0:13">
+        <TextStylePaint fontSize="29" fontAssetId="0:200" lineHeight="34" name="Title" id="0:14"><Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="White"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:14" text="UNA PROMO ESTÁ\nPOR APARECER" name="Run"/>
+      </Text>
+      <Shape x="195" y="406" name="W Touch Target" id="0:15"><Ellipse width="176" height="176" name="Touch Ring"/><Fill name="Fill"><SolidColor colorValue="FFBFFF00" name="Green"/></Fill></Shape>
+      <Shape x="195" y="406" name="W Inner" id="0:16"><Ellipse width="154" height="154" name="Inner Circle"/><Fill name="Fill"><SolidColor colorValue="FF000000" name="Black"/></Fill></Shape>
+      <Text x="195" y="327" width="154" height="158" originX="0.5" sizingValue="fixed" alignValue="center" verticalAlignValue="middle" name="W Mark" id="0:17">
+        <TextStylePaint fontSize="88" fontAssetId="0:200" name="W Style" id="0:18"><Fill name="Fill"><SolidColor colorValue="FFBFFF00" name="Green"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:18" text="W" name="Run"/>
+      </Text>
+      <Text x="195" y="536" originX="0.5" sizingValue="autoWidth" name="Ready Instruction" id="0:19">
+        <TextStylePaint fontSize="15" fontAssetId="0:200" letterSpacing="1" name="Instruction" id="0:20"><Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="White"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:20" text="TOCÁ LA W PARA ACTIVAR" name="Run"/>
+      </Text>
+      <Text x="195" y="574" originX="0.5" sizingValue="autoWidth" name="Ready Hint" id="0:21">
+        <TextStylePaint fontSize="12" fontAssetId="0:200" name="Hint" id="0:22"><Fill name="Fill"><SolidColor colorValue="FF8C8C8C" name="Gray"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:22" text="La revelación dura 2,5 segundos" name="Run"/>
+      </Text>
+    </Node>
+
+    <Node opacity="0" name="Reveal" id="0:30">
+      <Text x="195" y="260" originX="0.5" sizingValue="autoWidth" name="Reveal Label" id="0:31">
+        <TextStylePaint fontSize="13" fontAssetId="0:200" letterSpacing="3" name="Reveal Label Style" id="0:32"><Fill name="Fill"><SolidColor colorValue="FFBFFF00" name="Green"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:32" text="ACTIVANDO PROMO" name="Run"/>
+      </Text>
+      <Text x="195" y="312" originX="0.5" sizingValue="autoWidth" name="Reveal W" id="0:33">
+        <TextStylePaint fontSize="112" fontAssetId="0:200" name="Reveal W Style" id="0:34"><Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="White"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:34" text="W" name="Run"/>
+      </Text>
+      <Shape x="45" y="514" name="Progress Track" id="0:35"><Rectangle width="300" height="8" originX="0" originY="0.5" cornerRadiusTL="4" name="Track"/><Fill name="Fill"><SolidColor colorValue="FF242424" name="Dark Gray"/></Fill></Shape>
+      <Shape x="45" y="514" name="Progress Fill" id="0:36"><Rectangle width="1" height="8" originX="0" originY="0.5" cornerRadiusTL="4" name="Progress" id="0:37"/><Fill name="Fill"><SolidColor colorValue="FFBFFF00" name="Green"/></Fill></Shape>
+      <Text x="195" y="548" originX="0.5" sizingValue="autoWidth" name="Reveal Hint" id="0:38">
+        <TextStylePaint fontSize="12" fontAssetId="0:200" name="Reveal Hint Style" id="0:39"><Fill name="Fill"><SolidColor colorValue="FF8C8C8C" name="Gray"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:39" text="ESPERÁ EL DROP" name="Run"/>
+      </Text>
+    </Node>
+
+    <Node opacity="0" name="Available" id="0:40">
+      <Text x="45" y="112" sizingValue="autoWidth" name="Live Drop" id="0:41">
+        <TextStylePaint fontSize="13" fontAssetId="0:200" letterSpacing="2" name="Live Style" id="0:42"><Fill name="Fill"><SolidColor colorValue="FFBFFF00" name="Green"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:42" text="●  LIVE DROP" name="Run"/>
+      </Text>
+      <Text x="45" y="166" sizingValue="autoWidth" name="Offer Label" id="0:43">
+        <TextStylePaint fontSize="16" fontAssetId="0:200" letterSpacing="1" name="Offer Label Style" id="0:44"><Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="White"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:44" text="BRUNCH PARA DOS" name="Run"/>
+      </Text>
+      <Text x="35" y="205" sizingValue="autoWidth" name="Discount" id="0:45">
+        <TextStylePaint fontSize="132" fontAssetId="0:200" letterSpacing="-6" name="Discount Style" id="0:46"><Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="White"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:46" text="25%" name="Run"/>
+      </Text>
+      <Text x="45" y="360" sizingValue="autoWidth" name="Off" id="0:47">
+        <TextStylePaint fontSize="64" fontAssetId="0:200" letterSpacing="2" name="Off Style" id="0:48"><Fill name="Fill"><SolidColor colorValue="FFBFFF00" name="Green"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:48" text="OFF" name="Run"/>
+      </Text>
+      <Shape x="45" y="470" name="Price Divider" id="0:49"><Rectangle width="300" height="1" originX="0" originY="0.5" name="Line"/><Fill name="Fill"><SolidColor colorValue="FF303030" name="Gray"/></Fill></Shape>
+      <Text x="45" y="498" sizingValue="autoWidth" name="Price" id="0:50">
+        <TextStylePaint fontSize="26" fontAssetId="0:200" name="Price Style" id="0:51"><Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="White"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:51" text="PAGÁS $975" name="Run"/>
+      </Text>
+      <Text x="45" y="548" sizingValue="autoWidth" name="Venue" id="0:52">
+        <TextStylePaint fontSize="13" fontAssetId="0:200" name="Venue Style" id="0:53"><Fill name="Fill"><SolidColor colorValue="FF8C8C8C" name="Gray"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:53" text="CAFÉ CENTRAL · MONTEVIDEO" name="Run"/>
+      </Text>
+      <Shape x="45" y="666" name="Catch Button" id="0:54"><Rectangle width="300" height="76" originX="0" originY="0.5" cornerRadiusTL="18" name="Button"/><Fill name="Fill"><SolidColor colorValue="FFBFFF00" name="Green"/></Fill></Shape>
+      <Text x="195" y="628" width="300" height="76" originX="0.5" sizingValue="fixed" alignValue="center" verticalAlignValue="middle" name="Catch Label" id="0:55">
+        <TextStylePaint fontSize="21" fontAssetId="0:200" letterSpacing="1" name="Button Style" id="0:56"><Fill name="Fill"><SolidColor colorValue="FF000000" name="Black"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:56" text="ATRAPAR [30]" name="CTA Run"><DataBindContext sourcePathIds="0:100-0:103" propertyKey="268"/></TextValueRun>
+      </Text>
+      <Text x="195" y="728" originX="0.5" sizingValue="autoWidth" name="Countdown Hint" id="0:57">
+        <TextStylePaint fontSize="12" fontAssetId="0:200" name="Countdown Hint Style" id="0:58"><Fill name="Fill"><SolidColor colorValue="FF8C8C8C" name="Gray"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:58" text="LA RESERVA SE CONFIRMA AL TOCAR" name="Run"/>
+      </Text>
+    </Node>
+
+    <Node opacity="0" name="Claimed" id="0:60">
+      <Shape x="195" y="302" name="Claimed Ring" id="0:61"><Ellipse width="146" height="146" name="Ring"/><Fill name="Fill"><SolidColor colorValue="FFBFFF00" name="Green"/></Fill></Shape>
+      <Text x="195" y="236" width="146" height="132" originX="0.5" sizingValue="fixed" alignValue="center" verticalAlignValue="middle" name="Check" id="0:62">
+        <TextStylePaint fontSize="64" fontAssetId="0:200" name="Check Style" id="0:63"><Fill name="Fill"><SolidColor colorValue="FF000000" name="Black"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:63" text="✓" name="Run"/>
+      </Text>
+      <Text x="45" y="408" width="300" height="78" sizingValue="fixed" alignValue="center" verticalAlignValue="middle" name="Claimed Title" id="0:64">
+        <TextStylePaint fontSize="30" fontAssetId="0:200" name="Claimed Title Style" id="0:65"><Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="White"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:65" text="PROMO ATRAPADA" name="Run"/>
+      </Text>
+      <Text x="45" y="490" width="300" height="54" sizingValue="fixed" alignValue="center" verticalAlignValue="middle" name="Claimed Copy" id="0:66">
+        <TextStylePaint fontSize="15" fontAssetId="0:200" name="Claimed Copy Style" id="0:67"><Fill name="Fill"><SolidColor colorValue="FFB7B7B7" name="Light Gray"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:67" text="Tu reserva quedó confirmada." name="Run"/>
+      </Text>
+    </Node>
+
+    <Node opacity="0" name="Expired" id="0:70">
+      <Text x="195" y="242" originX="0.5" sizingValue="autoWidth" name="Expired Clock" id="0:71">
+        <TextStylePaint fontSize="88" fontAssetId="0:200" name="Clock Style" id="0:72"><Fill name="Fill"><SolidColor colorValue="FFBFFF00" name="Green"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:72" text="00" name="Run"/>
+      </Text>
+      <Text x="45" y="408" width="300" height="78" sizingValue="fixed" alignValue="center" verticalAlignValue="middle" name="Expired Title" id="0:73">
+        <TextStylePaint fontSize="30" fontAssetId="0:200" name="Expired Title Style" id="0:74"><Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="White"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:74" text="TIEMPO AGOTADO" name="Run"/>
+      </Text>
+      <Text x="45" y="490" width="300" height="54" sizingValue="fixed" alignValue="center" verticalAlignValue="middle" name="Expired Copy" id="0:75">
+        <TextStylePaint fontSize="15" fontAssetId="0:200" name="Expired Copy Style" id="0:76"><Fill name="Fill"><SolidColor colorValue="FFB7B7B7" name="Light Gray"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:76" text="La promoción volvió al feed." name="Run"/>
+      </Text>
+    </Node>
+
+    <Node opacity="0" name="Restart" id="0:80">
+      <Shape x="45" y="650" name="Restart Button" id="0:81"><Rectangle width="300" height="70" originX="0" originY="0.5" cornerRadiusTL="18" name="Button"/><Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="White"/></Fill></Shape>
+      <Text x="195" y="615" width="300" height="70" originX="0.5" sizingValue="fixed" alignValue="center" verticalAlignValue="middle" name="Restart Label" id="0:82">
+        <TextStylePaint fontSize="18" fontAssetId="0:200" letterSpacing="1" name="Restart Style" id="0:83"><Fill name="Fill"><SolidColor colorValue="FF000000" name="Black"/></Fill></TextStylePaint>
+        <TextValueRun styleId="0:83" text="VER OTRA PROMO" name="Run"/>
+      </Text>
+    </Node>
+
+    <LinearAnimation duration="1" name="READY" id="0:110">
+      <KeyedObject objectId="0:10"><KeyedProperty propertyKey="18"><KeyFrameDouble value="1"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:30"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:40"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:60"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:70"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:80"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+    </LinearAnimation>
+    <LinearAnimation fps="60" duration="162" name="REVEALING" id="0:111">
+      <KeyedObject objectId="0:10"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:30"><KeyedProperty propertyKey="18"><KeyFrameDouble value="1"/><KeyFrameDouble frame="150" value="1"/><KeyFrameDouble frame="151" value="0"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:40"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:60"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:70"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:80"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:37"><KeyedProperty propertyKey="20"><KeyFrameDouble value="1" interpolationType="linear"/><KeyFrameDouble frame="150" value="300" interpolationType="linear"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:33"><KeyedProperty propertyKey="16"><KeyFrameDouble value="0.9" interpolationType="linear"/><KeyFrameDouble frame="75" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="150" value="1" interpolationType="linear"/></KeyedProperty><KeyedProperty propertyKey="17"><KeyFrameDouble value="0.9" interpolationType="linear"/><KeyFrameDouble frame="75" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="150" value="1" interpolationType="linear"/></KeyedProperty></KeyedObject>
+    </LinearAnimation>
+    <LinearAnimation duration="1" name="AVAILABLE" id="0:112">
+      <KeyedObject objectId="0:10"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:30"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:40"><KeyedProperty propertyKey="18"><KeyFrameDouble value="1"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:60"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:70"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:80"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+    </LinearAnimation>
+    <LinearAnimation duration="24" name="CLAIMED" id="0:113">
+      <KeyedObject objectId="0:40"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:60"><KeyedProperty propertyKey="18"><KeyFrameDouble value="1"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:70"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:80"><KeyedProperty propertyKey="18"><KeyFrameDouble value="1"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:61"><KeyedProperty propertyKey="16"><KeyFrameDouble value="0.6" interpolationType="linear"/><KeyFrameDouble frame="18" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="24" value="1" interpolationType="linear"/></KeyedProperty><KeyedProperty propertyKey="17"><KeyFrameDouble value="0.6" interpolationType="linear"/><KeyFrameDouble frame="18" value="1.08" interpolationType="linear"/><KeyFrameDouble frame="24" value="1" interpolationType="linear"/></KeyedProperty></KeyedObject>
+    </LinearAnimation>
+    <LinearAnimation duration="1" name="EXPIRED" id="0:114">
+      <KeyedObject objectId="0:40"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:60"><KeyedProperty propertyKey="18"><KeyFrameDouble value="0"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:70"><KeyedProperty propertyKey="18"><KeyFrameDouble value="1"/></KeyedProperty></KeyedObject>
+      <KeyedObject objectId="0:80"><KeyedProperty propertyKey="18"><KeyFrameDouble value="1"/></KeyedProperty></KeyedObject>
+    </LinearAnimation>
+
+    <StateMachine name="PromoMachine" id="0:90">
+      <StateMachineLayer name="Promo Flow" id="0:91">
+        <AnyState x="760" y="-120"/><ExitState x="920" y="-120"/>
+        <EntryState x="0" y="0"><StateTransition stateToId="0:92"/></EntryState>
+        <AnimationState x="180" y="0" animationId="0:110" id="0:92">
+          <StateTransition stateToId="0:93" duration="0"><TransitionViewModelCondition><TransitionPropertyViewModelComparator><BindablePropertyBoolean><DataBindContext sourcePathIds="0:100-0:101" propertyKey="634"/></BindablePropertyBoolean></TransitionPropertyViewModelComparator><TransitionValueBooleanComparator value="true"/></TransitionViewModelCondition></StateTransition>
+        </AnimationState>
+        <AnimationState x="360" y="0" animationId="0:111" reset="true" id="0:93"><StateTransition stateToId="0:94" duration="0" enableExitTime="true" exitTimeIsPercetange="true" exitTime="100"/></AnimationState>
+        <AnimationState x="540" y="0" animationId="0:112" id="0:94">
+          <StateMachineFireEvent eventId="0:122" occursValue="0"/>
+          <StateTransition stateToId="0:95" duration="80"><TransitionViewModelCondition><TransitionPropertyViewModelComparator><BindablePropertyBoolean><DataBindContext sourcePathIds="0:100-0:102" propertyKey="634"/></BindablePropertyBoolean></TransitionPropertyViewModelComparator><TransitionValueBooleanComparator value="true"/></TransitionViewModelCondition></StateTransition>
+          <StateTransition stateToId="0:96" duration="80"><TransitionViewModelCondition><TransitionPropertyViewModelComparator><BindablePropertyBoolean><DataBindContext sourcePathIds="0:100-0:104" propertyKey="634"/></BindablePropertyBoolean></TransitionPropertyViewModelComparator><TransitionValueBooleanComparator value="true"/></TransitionViewModelCondition></StateTransition>
+        </AnimationState>
+        <AnimationState x="720" y="-60" animationId="0:113" reset="true" id="0:95">
+          <StateMachineFireEvent eventId="0:123" occursValue="0"/>
+          <StateTransition stateToId="0:92" duration="0"><TransitionViewModelCondition><TransitionPropertyViewModelComparator><BindablePropertyBoolean><DataBindContext sourcePathIds="0:100-0:102" propertyKey="634"/></BindablePropertyBoolean></TransitionPropertyViewModelComparator><TransitionValueBooleanComparator value="false"/></TransitionViewModelCondition></StateTransition>
+        </AnimationState>
+        <AnimationState x="720" y="80" animationId="0:114" id="0:96">
+          <StateMachineFireEvent eventId="0:124" occursValue="0"/>
+          <StateTransition stateToId="0:92" duration="0"><TransitionViewModelCondition><TransitionPropertyViewModelComparator><BindablePropertyBoolean><DataBindContext sourcePathIds="0:100-0:104" propertyKey="634"/></BindablePropertyBoolean></TransitionPropertyViewModelComparator><TransitionValueBooleanComparator value="false"/></TransitionViewModelCondition></StateTransition>
+        </AnimationState>
+      </StateMachineLayer>
+      <StateMachineListenerSingle targetId="0:15" listenerTypeValue="click" name="Start Promo" id="0:130"><ListenerViewModelChange><BindablePropertyBoolean propertyValue="true"><DataBindContext sourcePathIds="0:100-0:101" propertyKey="634" direction="true"/></BindablePropertyBoolean></ListenerViewModelChange><ListenerFireEvent eventId="0:121"/></StateMachineListenerSingle>
+      <StateMachineListenerSingle targetId="0:54" listenerTypeValue="click" name="Claim Promo" id="0:131"><ListenerViewModelChange><BindablePropertyBoolean propertyValue="true"><DataBindContext sourcePathIds="0:100-0:102" propertyKey="634" direction="true"/></BindablePropertyBoolean></ListenerViewModelChange><ListenerFireEvent eventId="0:123"/></StateMachineListenerSingle>
+      <StateMachineListenerSingle targetId="0:81" listenerTypeValue="click" name="Reset Promo" id="0:132">
+        <ListenerViewModelChange><BindablePropertyBoolean propertyValue="false"><DataBindContext sourcePathIds="0:100-0:101" propertyKey="634" direction="true"/></BindablePropertyBoolean></ListenerViewModelChange>
+        <ListenerViewModelChange><BindablePropertyBoolean propertyValue="false"><DataBindContext sourcePathIds="0:100-0:102" propertyKey="634" direction="true"/></BindablePropertyBoolean></ListenerViewModelChange>
+        <ListenerViewModelChange><BindablePropertyBoolean propertyValue="false"><DataBindContext sourcePathIds="0:100-0:104" propertyKey="634" direction="true"/></BindablePropertyBoolean></ListenerViewModelChange>
+        <ListenerFireEvent eventId="0:125"/>
+      </StateMachineListenerSingle>
+    </StateMachine>
+  </Artboard>
+
+  <ViewModel defaultInstanceId="0:105" name="PromoViewModel" id="0:100">
+    <ViewModelPropertyBoolean name="started" id="0:101"/><ViewModelPropertyBoolean name="claimed" id="0:102"/><ViewModelPropertyString name="ctaLabel" id="0:103"/><ViewModelPropertyBoolean name="expired" id="0:104"/>
+    <ViewModelInstance exports="true" name="Default" id="0:105"><ViewModelInstanceBoolean propertyValue="false" viewModelPropertyId="0:101"/><ViewModelInstanceBoolean propertyValue="false" viewModelPropertyId="0:102"/><ViewModelInstanceString propertyValue="ATRAPAR [30]" viewModelPropertyId="0:103"/><ViewModelInstanceBoolean propertyValue="false" viewModelPropertyId="0:104"/></ViewModelInstance>
+  </ViewModel>
+  <Event name="startRequested" id="0:121"/><Event name="offerAvailable" id="0:122"/><Event name="claimRequested" id="0:123"/><Event name="offerExpired" id="0:124"/><Event name="resetRequested" id="0:125"/>
+  <FontAsset file="Montserrat.ttf" name="Montserrat" id="0:200"/>
+</Rive>

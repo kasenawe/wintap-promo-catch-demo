@@ -29,6 +29,17 @@
   text-transform: uppercase;
 }
 
+.kicker::before {
+  content: '';
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  background: var(--focus);
+  box-shadow: 0 0 1rem color-mix(in srgb, var(--focus) 55%, transparent);
+}
+
 .title {
   margin: 0;
   color: var(--text);
@@ -75,7 +86,7 @@
 }
 
 .restart:hover {
-  border-color: color-mix(in srgb, var(--text) 32%, transparent);
+  border-color: color-mix(in srgb, var(--focus) 65%, transparent);
 }
 
 .restart:focus-visible {
