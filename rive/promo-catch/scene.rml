@@ -91,7 +91,7 @@
     <Node opacity="0" name="Claimed" id="0:60">
       <Text x="195" y="236" width="146" height="132" originX="0.5" sizingValue="fixed" alignValue="center" verticalAlignValue="middle" name="Check" id="0:62">
         <TextStylePaint fontSize="64" fontAssetId="0:200" name="Check Style" id="0:63"><Fill name="Fill"><SolidColor colorValue="FF000000" name="Black"/></Fill><TextStyleAxis tag="2003265652" axisValue="600" name="Weight"/></TextStylePaint>
-        <TextValueRun styleId="0:63" text="✓" name="Run"/>
+        <TextValueRun styleId="0:63" text="OK" name="Run"/>
       </Text>
       <Shape x="195" y="302" name="Claimed Ring" id="0:61"><Ellipse width="146" height="146" name="Ring"/><Fill name="Fill"><SolidColor colorValue="FFBFFF00" name="Green"/></Fill></Shape>
       <Text x="45" y="408" width="300" height="78" sizingValue="fixed" alignValue="center" verticalAlignValue="middle" name="Claimed Title" id="0:64">
