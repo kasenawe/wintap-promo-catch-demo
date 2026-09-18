@@ -54,7 +54,7 @@
     <Node opacity="0" name="Available" id="0:40">
       <Text x="45" y="112" sizingValue="autoWidth" name="Live Drop" id="0:41">
         <TextStylePaint fontSize="13" fontAssetId="0:200" letterSpacing="2" name="Live Style" id="0:42"><Fill name="Fill"><SolidColor colorValue="FFBFFF00" name="Green"/></Fill><TextStyleAxis tag="2003265652" axisValue="600" name="Weight"/></TextStylePaint>
-        <TextValueRun styleId="0:42" text="●  LIVE DROP" name="Run"/>
+        <TextValueRun styleId="0:42" text="LIVE DROP" name="Run"/>
       </Text>
       <Text x="45" y="166" sizingValue="autoWidth" name="Offer Label" id="0:43">
         <TextStylePaint fontSize="16" fontAssetId="0:200" letterSpacing="1" name="Offer Label Style" id="0:44"><Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="White"/></Fill><TextStyleAxis tag="2003265652" axisValue="600" name="Weight"/></TextStylePaint>
@@ -120,11 +120,11 @@
     </Node>
 
     <Node opacity="0" name="Restart" id="0:80">
-      <Text x="195" y="615" width="300" height="70" originX="0.5" sizingValue="fixed" alignValue="center" verticalAlignValue="middle" name="Restart Label" id="0:82">
+      <Text x="195" y="725" width="300" height="70" originX="0.5" sizingValue="fixed" alignValue="center" verticalAlignValue="middle" name="Restart Label" id="0:82">
         <TextStylePaint fontSize="18" fontAssetId="0:200" letterSpacing="1" name="Restart Style" id="0:83"><Fill name="Fill"><SolidColor colorValue="FF000000" name="Black"/></Fill><TextStyleAxis tag="2003265652" axisValue="600" name="Weight"/></TextStylePaint>
         <TextValueRun styleId="0:83" text="VER OTRA PROMO" name="Run"/>
       </Text>
-      <Shape x="45" y="650" name="Restart Button" id="0:81"><Rectangle width="300" height="70" originX="0" originY="0.5" cornerRadiusTL="18" name="Button"/><Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="White"/></Fill></Shape>
+      <Shape x="45" y="760" name="Restart Button" id="0:81"><Rectangle width="300" height="70" originX="0" originY="0.5" cornerRadiusTL="18" name="Button"/><Fill name="Fill"><SolidColor colorValue="FFFFFFFF" name="White"/></Fill></Shape>
     </Node>
 
     <LinearAnimation duration="1" name="READY" id="0:110">
